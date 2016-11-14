@@ -1,0 +1,27 @@
+{
+  "name": "iviixvii",
+  "version": "1.0.0",
+  "description": "wedding app",
+  "scripts": {
+    "start": "node src/server/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaredmpeterson/iviixvii.git"
+  },
+  "author": "Jared M. Peterson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaredmpeterson/iviixvii/issues"
+  },
+  "homepage": "https://github.com/jaredmpeterson/iviixvii#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "express-session": "^1.14.2",
+    "morgan": "^1.7.0",
+    "passport": "^0.3.2",
+    "passport-facebook": "^2.1.1",
+    "serve-favicon": "^2.3.0"
+  }
+}
