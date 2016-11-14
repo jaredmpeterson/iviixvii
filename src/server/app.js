@@ -10,7 +10,6 @@ var logger = require('morgan');
 var session = require('express-session')
 var FacebookStrategy = require('passport-facebook').Strategy
 
-var config = require('./config')
 var port = process.env.PORT || 1717
 var environment = process.env.NODE_ENV;
 
@@ -24,7 +23,7 @@ console.log('NODE_ENV=' + environment);
 app.use('/api', require('./routes'));
 
 app.use(session({
-    secret: config.secret,
+    secret: process.env.secret,
     resave: true,
     saveUninitialized: true
 }));
@@ -32,8 +31,8 @@ app.use(passport.initialize());
 app.use(passport.session())
 
 passport.use(new FacebookStrategy({
-  clientID: config.clientID,
-  clientSecret: config.clientSecret,
+  clientID: process.env.clientID,
+  clientSecret: process.env.clientSecret,
   callbackURL: 'http://localhost:' + port + '/auth/facebook/callback'
 }, function(token, refreshToken, profile, done) {
   return done(null, profile);
