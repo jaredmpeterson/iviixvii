@@ -29,6 +29,11 @@ module.exports = function () {
         server: server,
         source: src,
         temp: temp,
+          /** optimized files **/
+        optimized: {
+            app: 'app.js',
+            lib: 'lib.js'
+        },  
 
           /** template cache **/
         templateCache: {

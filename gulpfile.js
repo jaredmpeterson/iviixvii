@@ -11,8 +11,6 @@ var colors = $.util.colors;
 var envenv = $.util.env;
 var port = process.env.PORT || config.defaultPort;
 
-
-
 gulp.task('help', $.taskListing);
 gulp.task('default', ['help']);
 
@@ -134,7 +132,8 @@ gulp.task('optimize', ['inject', 'fonts', 'images'], function () {
     });
     var templateCache = config.temp + config.templateCache.file;
     var cssFilter = $.filter('**/*.css');
-    var jsFilter = $.filter('**/*.js');
+    var jsAppFilter = $.filter('**/' + config.optimized.app);
+    var jsLibFilter = $.filter('**/' + config.optimized.lib);
 
     return gulp
         .src(config.index)
@@ -148,9 +147,13 @@ gulp.task('optimize', ['inject', 'fonts', 'images'], function () {
         .pipe(cssFilter)
         .pipe($.csso())
         .pipe(cssFilter.restore())
-        .pipe(jsFilter)
+        .pipe(jsLibFilter)
         .pipe($.uglify())
-        .pipe(jsFilter.restore())
+        .pipe(jsLibFilter.restore())
+        .pipe(jsAppFilter)
+        .pipe($.ngAnnotate())
+        .pipe($.uglify())
+        .pipe(jsAppFilter.restore())
         .pipe(assets.restore())
         .pipe($.useref())
         .pipe(gulp.dest(config.build));
