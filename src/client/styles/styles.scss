@@ -1,6 +1,13 @@
 @import "colors";
 
 h1 {
-  font-family: "acumin-pro",sans-serif;
+  font-family: "acumin-pro", Arial, Helvetica, sans-serif;
   color: $primary;
+  font-size: 4rem;
+}
+
+h2 {
+  font-family: "acumin-pro", Arial, Helvetica, sans-serif;
+  color: $secondary;
+  font-size: 2rem;
 }

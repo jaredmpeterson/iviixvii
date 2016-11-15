@@ -17,7 +17,7 @@
       "allowComments": true,
       "allowRegex": true
     },
-    "validateIndentation": 2,
+    "validateIndentation": 4,
     "validateQuoteMarks": "'",
 
     "disallowMultipleLineStrings": true,
@@ -49,15 +49,13 @@
     "requireSpacesInConditionalExpression": true,
     "requireSpaceBeforeBlockStatements": true,
     "requireLineFeedAtFileEnd": true,
+    "disallowSpacesInsideObjectBrackets": "all",
     "disallowSpacesInsideArrayBrackets": "all",
     "disallowSpacesInsideParentheses": true,
 
-    "jsDoc": {
-        "checkAnnotations": true,
+    "validateJSDoc": {
         "checkParamNames": true,
-        "requireParamTypes": true,
-        "checkReturnTypes": true,
-        "checkTypes": true
+        "requireParamTypes": true
     },
 
     "disallowMultipleLineBreaks": true,
@@ -65,6 +63,7 @@
     "disallowCommaBeforeLineBreak": null,
     "disallowDanglingUnderscores": null,
     "disallowEmptyBlocks": null,
+    "disallowMultipleLineStrings": null,
     "disallowTrailingComma": null,
     "requireCommaBeforeLineBreak": null,
     "requireDotNotation": null,
