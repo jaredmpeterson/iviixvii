@@ -1,13 +1,17 @@
 @import "colors";
+body {
+    background: url('http://d33tz7arw1d3eu.cloudfront.net/5467505/72cc4850cf5cbc69b1a2e9a5d8aa08e2-large.jpg') 100% no-repeat fixed;
+    background-size: cover;
+}
 
 h1 {
-  font-family: "acumin-pro", Arial, Helvetica, sans-serif;
-  color: $primary;
-  font-size: 4rem;
+    font-family: "acumin-pro", Arial, Helvetica, sans-serif;
+    color: $primary;
+    font-size: 4rem;
 }
 
 h2 {
-  font-family: "acumin-pro", Arial, Helvetica, sans-serif;
-  color: $secondary;
-  font-size: 2rem;
+    font-family: "acumin-pro", Arial, Helvetica, sans-serif;
+    color: $secondary;
+    font-size: 2rem;
 }
