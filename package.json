@@ -1,6 +1,6 @@
 {
   "name": "iviixvii",
-  "version": "1.0.0",
+  "version": "0.2.0",
   "description": "wedding app",
   "scripts": {
     "start": "node src/server/app.js"
@@ -32,6 +32,7 @@
     "gulp": "^3.9.1",
     "gulp-angular-templatecache": "^2.0.0",
     "gulp-autoprefixer": "^3.1.1",
+    "gulp-bump": "^2.5.0",
     "gulp-csso": "^2.0.0",
     "gulp-filter": "^2.0.0",
     "gulp-if": "^2.0.2",

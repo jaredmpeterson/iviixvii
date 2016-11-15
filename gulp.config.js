@@ -2,6 +2,7 @@ module.exports = function () {
     var build = './build/';
     var client = './src/client/';
     var clientApp = client + 'app/';
+    var root = './';
     var server = './src/server/';
     var src = './src/';
     var temp = './.tmp/';
@@ -25,6 +26,7 @@ module.exports = function () {
             clientApp + '**/*.js',
             '!' + clientApp + '**/*.spec.js'
         ],
+        root: root,
         sass: client + 'styles/*.scss',
         server: server,
         source: src,
@@ -52,6 +54,10 @@ module.exports = function () {
             directory: './bower_components/',
             ignorePath: '../..'
         },
+          packages : [
+            './package.json',
+            './bower.json'
+        ],
             /** node settings **/
         defaultPort: 5000,
         nodeServer: server + 'app.js'
