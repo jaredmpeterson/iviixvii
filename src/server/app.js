@@ -10,7 +10,7 @@ var logger = require('morgan');
 var session = require('express-session')
 var FacebookStrategy = require('passport-facebook').Strategy
 
-var port = process.env.PORT || 1717
+var port = process.env.PORT || 5000;
 var environment = process.env.NODE_ENV;
 
 app.use(favicon(__dirname + '/favicon.ico'));
