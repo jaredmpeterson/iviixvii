@@ -1,14 +1,14 @@
 /*jshint node:true*/
 'use strict';
 
-const express = require('express')
-const app = express()
+var express = require('express');
+var app = express();
 
-var favicon = require('serve-favicon')
-var passport = require('passport')
+var favicon = require('serve-favicon');
+var passport = require('passport');
 var logger = require('morgan');
-var session = require('express-session')
-var FacebookStrategy = require('passport-facebook').Strategy
+var session = require('express-session');
+var FacebookStrategy = require('passport-facebook').Strategy;
 
 var port = process.env.PORT || 5000;
 var environment = process.env.NODE_ENV;
@@ -28,7 +28,7 @@ app.use(session({
     saveUninitialized: true
 }));
 app.use(passport.initialize());
-app.use(passport.session())
+app.use(passport.session());
 
 passport.use(new FacebookStrategy({
   clientID: process.env.clientID,
@@ -56,7 +56,7 @@ passport.deserializeUser(function(obj, done) {
 
 app.get('/me', function (req, res, next) {
     res.json(req.user);
-})
+});
 
 app.listen(port, function() {
   console.log('Express server listening on port ' + port);
