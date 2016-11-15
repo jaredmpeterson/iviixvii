@@ -1,4 +1,5 @@
 module.exports = function () {
+    var build = './build/';
     var client = './src/client/';
     var clientApp = client + 'app/';
     var server = './src/server/';
@@ -11,8 +12,11 @@ module.exports = function () {
             './src/**/*.js',
             './*.js'
         ],
+        build: build,
         client: client,
         css: temp + 'styles.css',
+        fonts: './bower_components/font-awesome/fonts/**/*.*',
+        images: client + 'images/**/*.*',
         index: client + 'index.html',
         js: [
             clientApp + '**/*.module.js',
