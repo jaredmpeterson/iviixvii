@@ -15,6 +15,18 @@ gulp.task('vet', function() {
         .pipe($.jshint.reporter('fail'));
 });
 
+gulp.task('styles', function () {
+  log('Compile Sass to CSS');
+
+  return gulp
+  .src(config.sass)
+  .pipe($.sass())
+  .pipe($.autoprefixer({
+    browsers: ['last 2 version', '> 5%']
+  }))
+  .pipe(gulp.dest(config.temp));
+});
+
 ////////////
 
 function log(msg) {

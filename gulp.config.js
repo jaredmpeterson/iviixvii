@@ -1,12 +1,19 @@
-module.exports = function() {
-    var config = {
+module.exports = function () {
+  var client = './src/client/';
+  var clientApp = client + 'app/';
+  var temp = './.tmp/';
 
-        // all js to vet
-        alljs: [
-            './src/**/*.js',
-            './*.js'
-        ]
-    };
+  var config = {
+    temp: temp,
+    client: client,
 
-    return config;
+    // all js to vet
+    alljs: [
+      './src/**/*.js',
+      './*.js'
+    ],
+    sass: client + 'styles/*.scss'
+  };
+
+  return config;
 };
