@@ -16,7 +16,7 @@ var port = process.env.PORT || 5000;
 var environment = process.env.NODE_ENV;
 require('dotenv').config();
 
-app.use(favicon(__dirname + '/favicon.ico'));
+app.use(favicon(__dirname + '/favicon.png'));
 app.use(bodyParser.urlencoded({
     extended: true
 }));
