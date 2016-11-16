@@ -1,22 +1,107 @@
+@import "reset";
+@import "colors";
+@import "fonts";
+
 // bower:scss
 @import "bower_components/font-awesome/scss/font-awesome.scss";
 // endbower
 
-@import "colors";
+* {
+    box-sizing: border-box;
+}
+
+body,html {
+    min-height: 100%;
+    height: 100%;
+}
 
 body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    color: $accent;
+    line-height: 1.8925;
     background: url('http://d33tz7arw1d3eu.cloudfront.net/5467505/72cc4850cf5cbc69b1a2e9a5d8aa08e2-xxlarge.jpg') 100% no-repeat fixed;
     background-size: cover;
+    background-position: center;
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+    }
+    &:before {
+        mix-blend-mode: overlay;
+        top: 2%;
+        right: 2%;
+        bottom: 2%;
+        left: 2%;
+        border: 1px solid #efefef;
+        z-index: 2;
+    }
+    &:after {
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0.6;
+        background: rgba(#1a1a1a, 0.9);
+        background: radial-gradient( circle at top, $blush, #1a1a1a );
+    }
+    @media (max-height: 450px) {
+        font-size: 10px;
+    }
+}
+
+.content {
+    position: relative;
+    max-width: 650px;
+    z-index: 1;
+    padding: 4%;
+    text-align: justify;
+}
+
+p {
+    @include pro($thin);
+    text-align: center;
+    color: $primary;
+    font-size: 4rem;
+    position: relative;
+    padding: 1em 0;
+    letter-spacing: 1px;
+    
+    &:before,
+    &:after {
+        mix-blend-mode: difference;
+        content: "";
+        position: absolute;
+        left: calc(25% / 2);
+        width: 75%;
+        height: 1px;
+        background: $accent;
+        // background: linear-gradient(to right, #7F5B4B, #3B1E11);
+    }
+    &:before {
+        top: 0;
+    }
+    &:after {
+        bottom: 0;
+    }
 }
 
 h1 {
-    font-family: "acumin-pro", Arial, Helvetica, sans-serif;
-    color: $primary;
+    @include nautica;
+    color: $accent;
     font-size: 4rem;
+    margin-top: 0;
+    letter-spacing: 2px;
+    line-height: 1.125;
+    /*text-transform: uppercase;*/
+    text-align: center;
 }
 
 h2 {
-    font-family: "acumin-pro", Arial, Helvetica, sans-serif;
+    @include nautica;
     color: $accent;
-    font-size: 3rem;
+    font-size: 6rem;
 }
