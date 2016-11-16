@@ -3,7 +3,9 @@
   "version": "0.1.1",
   "description": "wedding app",
   "scripts": {
-    "start": "node src/server/app.js"
+    "init": "npm install",
+    "install": "bower install",
+    "start": "gulp serve-build"
   },
   "repository": {
     "type": "git",
