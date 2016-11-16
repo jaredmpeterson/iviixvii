@@ -1,6 +1,11 @@
+// bower:scss
+@import "bower_components/font-awesome/scss/font-awesome.scss";
+// endbower
+
 @import "colors";
+
 body {
-    background: url('http://d33tz7arw1d3eu.cloudfront.net/5467505/72cc4850cf5cbc69b1a2e9a5d8aa08e2-large.jpg') 100% no-repeat fixed;
+    background: url('http://d33tz7arw1d3eu.cloudfront.net/5467505/72cc4850cf5cbc69b1a2e9a5d8aa08e2-xxlarge.jpg') 100% no-repeat fixed;
     background-size: cover;
 }
 

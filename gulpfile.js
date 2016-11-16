@@ -28,7 +28,7 @@ gulp.task('vet', function () {
         .pipe($.jshint.reporter('fail'));
 });
 
-gulp.task('styles', ['clean-styles'], function () {
+gulp.task('styles', ['clean-styles', 'wiresass'], function () {
     log('Compiling Sass --> CSS');
 
     return gulp
@@ -102,6 +102,17 @@ gulp.task('templatecache', ['clean-code'], function () {
             config.templateCache.options
         ))
         .pipe(gulp.dest(config.temp));
+});
+
+gulp.task('wiresass', function () {
+  var options = config.wiredepSass();
+    var wiredep = require('wiredep').stream;
+    log('Compiling Sass --> CSS');
+
+    return gulp
+        .src(config.sass)
+        .pipe(wiredep(options))
+        .pipe(gulp.dest(config.styles));
 });
 
 gulp.task('wiredep', function () {

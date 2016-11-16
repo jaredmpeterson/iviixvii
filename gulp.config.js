@@ -28,6 +28,7 @@ module.exports = function () {
         ],
         root: root,
         sass: client + 'styles/*.scss',
+        styles: client + 'styles/',
         server: server,
         source: src,
         temp: temp,
@@ -69,6 +70,15 @@ module.exports = function () {
             bowerJson: config.bower.json,
             directory: config.bower.directory,
             ignorePath: config.bower.ignorePath
+        };
+        return options;
+    };
+
+     config.wiredepSass = function () {
+        var options = {
+            bowerJson: config.bower.json,
+            directory: config.bower.directory,
+            ignorePath: config.bower.ignorePath + '/../'
         };
         return options;
     };
