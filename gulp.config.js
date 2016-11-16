@@ -48,7 +48,7 @@ module.exports = function () {
             }
         },
             /** browser sync **/
-        browserReloadDelay: 1000,
+        browserReloadDelay: 0,
             /** bower and npm **/
         bower: {
             json: require('./bower.json'),
