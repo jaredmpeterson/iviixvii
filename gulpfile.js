@@ -34,10 +34,11 @@ gulp.task('styles', ['clean-styles', 'wiresass'], function () {
     return gulp
         .src(config.sass)
         .pipe($.plumber())
-        .pipe($.sass())
+        .pipe($.sass.sync())
         .pipe($.autoprefixer({
             browsers: ['last 2 version', '> 5%']
         }))
+        .pipe($.plumber.stop())
         .pipe(gulp.dest(config.temp));
 });
 
