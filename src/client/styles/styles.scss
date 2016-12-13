@@ -65,7 +65,7 @@ p {
     @include pro($thin);
     text-align: center;
     color: $primary;
-    font-size: 9rem;
+    font-size: 4rem;
     position: relative;
     padding: 1em 0;
     letter-spacing: 1px;
@@ -104,4 +104,12 @@ h2 {
     @include nautica;
     color: $accent;
     font-size: 6rem;
+}
+
+a {
+    @include cond;
+    text-decoration: none;
+    font-size: 2rem;
+    text-align: center;
+    color: $accent;
 }
