@@ -61,10 +61,15 @@ body {
     text-align: justify;
 }
 
+a {
+    z-index: 3;
+    color: white;
+}
+
 p {
-    @include pro($thin);
+    @include pro($regular);
     text-align: center;
-    color: $primary;
+    color: white;
     font-size: 4rem;
     position: relative;
     padding: 1em 0;
